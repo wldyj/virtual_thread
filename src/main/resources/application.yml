@@ -1,1 +1,16 @@
-spring.application.name=virtual_thread
+server:
+  port: 8081
+spring:
+  application:
+    name: virtual-thread-demo
+
+logging:
+  level:
+    root: INFO
+    com.jie.virtual_thread: DEBUG
+    org.springframework.web: INFO
+  pattern:
+    console: "%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n"
+    file: "%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n"
+  file:
+    name: logs/virtual-thread-demo.log
